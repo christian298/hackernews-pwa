@@ -1,0 +1,21 @@
+{
+    "presets": [
+        "@babel/preset-react",
+        [
+            "@babel/preset-env",
+            {
+                "targets": {
+                    "esmodules": true
+                }
+            }
+        ]
+    ],
+    "env": {
+        "production": {
+            "plugins": [["emotion", { "hoist": true }]]
+        },
+        "development": {
+            "plugins": [["emotion", { "sourceMap": true, "autoLabel": true }]]
+        }
+    }
+}
